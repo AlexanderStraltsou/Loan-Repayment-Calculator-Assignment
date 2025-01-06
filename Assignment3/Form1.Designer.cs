@@ -39,7 +39,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Loan Repayment Calculator By Alex";
+            this.Text = "Loan Repayment Calculator By Aliaksandr Straltsou";
             this.ClientSize = new System.Drawing.Size(800, 300);
 
             //Includes TextBoxes for inputs, labels for displaying info and button to calculate

@@ -1,5 +1,8 @@
 namespace Assignment3
 {
+    /// <summary>
+    /// Main Form for the Loan Repayment application for handling of user interaction and displaying calculated loan repayment details
+    /// </summary>
     public partial class Form1 : Form
     {
         private LoanRepayment loanRepayment;
@@ -10,7 +13,13 @@ namespace Assignment3
             loanRepayment = new LoanRepayment();
         }
 
-        //Function for handling Calculate button click which activating functions that reading inputs and showing the results
+
+        /// <summary>
+        /// Function for handling Calculate button click which is activating functions that reading inputs 
+        /// if valid showing the loan repayment results
+        /// </summary>
+        /// <param name="sender">Calculate Button</param>
+        /// <param name="e"></param>
         private void btnCalcLoanRepayment_Click(object sender, EventArgs e)
         {
             bool ok = ReadLoanRepaymentInput();
@@ -18,7 +27,14 @@ namespace Assignment3
                 DisplayLoanRepaymentResults();
         }
 
-        //Function for reading and validating users inputs
+
+        /// <summary>
+        /// Function for reading and validating users inputs for loan repayment details.
+        /// Displays an error message if input validation fails
+        /// </summary>
+        /// <returns>
+        /// Returns true if input is valid and false if not
+        /// </returns>
         private bool ReadLoanRepaymentInput()
         {
             bool ok = true;
@@ -38,7 +54,10 @@ namespace Assignment3
             return ok;
         }
 
-        //Function for displaying all the repayment details
+
+        /// <summary>
+        /// Function for displaying all the repayment details in the UI
+        /// </summary>
         private void DisplayLoanRepaymentResults()
         {
             double monthlyRepayment = loanRepayment.GetMonthlyRepayment();
